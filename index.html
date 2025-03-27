@@ -1,57 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acid-Base Environmental Impact</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
-        nav { text-align: center; padding: 10px; background: #333; }
-        nav a { color: white; padding: 14px 20px; text-decoration: none; display: inline-block; }
-        section { padding: 20px; max-width: 800px; margin: auto; background: white; }
-        footer { text-align: center; padding: 10px; background: #333; color: white; margin-top: 20px; }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Acid-Base Environmental Impact</h1>
-        <p>Educating the public on proper disposal of household acids and bases</p>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#chemicals">Household Chemicals</a>
-        <a href="#psa">PSA</a>
-        <a href="#resources">Resources</a>
-        <a href="#action">Take Action</a>
-    </nav>
-    <section id="home">
-        <h2>Welcome to Our Project</h2>
-        <p>Learn how common household chemicals impact the environment and how to dispose of them properly.</p>
-    </section>
-    <section id="chemicals">
-        <h2>Common Household Acids & Bases</h2>
-        <p>Examples include toilet bowl cleaner (HCl), drain cleaner (NaOH), vinegar (acetic acid), and bleach.</p>
-    </section>
-    <section id="psa">
-        <h2>Public Service Announcement (PSA)</h2>
-        <p>Watch our PSA to learn the best disposal methods for common acids and bases.</p>
-        <p><em>Embed video, infographic, or podcast here.</em></p>
-    </section>
-    <section id="resources">
-        <h2>Educational Resources</h2>
-        <p>Visit the following sites for more details on proper disposal:</p>
-        <ul>
-            <li><a href="https://www.epa.gov/hw/household-hazardous-waste-hhw" target="_blank">EPA Household Hazardous Waste</a></li>
-            <li><a href="https://pubs.nmsu.edu/_g/G312.pdf" target="_blank">NMSU Household Chemicals Guide</a></li>
-        </ul>
-    </section>
-    <section id="action">
-        <h2>Take Action</h2>
-        <p>Spread awareness and ensure proper disposal of household chemicals to protect the environment!</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Acid-Base PBL Project</p>
-    </footer>
-</body>
-</html>
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+
+export default function AcidBasePSA() {
+  const [email, setEmail] = useState("");
+  
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-green-100 p-6 flex flex-col items-center">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-center mb-6"
+      >
+        <h1 className="text-5xl font-extrabold text-blue-700">Safe Chemical Disposal PSA</h1>
+        <p className="text-lg text-gray-800 mt-3">
+          Learn how to properly dispose of household acids and bases to protect the environment and your health.
+        </p>
+      </motion.div>
+      
+      <div className="grid md:grid-cols-2 gap-8 w-full max-w-4xl">
+        <Card className="shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-3xl font-semibold text-red-600">Why It Matters</h2>
+            <p className="text-gray-700 mt-3 text-lg">
+              Household chemicals, if disposed of improperly, can contaminate water sources, harm wildlife, and damage ecosystems.
+            </p>
+          </CardContent>
+        </Card>
+        
+        <Card className="shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-3xl font-semibold text-green-600">Safe Disposal Methods</h2>
+            <ul className="list-disc list-inside text-gray-700 mt-3 text-lg space-y-2">
+              <li>Check the label for disposal instructions.</li>
+              <li>Use hazardous waste collection sites for large amounts.</li>
+              <li>Never mix chemicals, especially bleach and ammonia.</li>
+              <li>Recycle empty containers when possible.</li>
+              <li>Contact local waste management services for guidance.</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="mt-10 text-center w-full max-w-xl"
+      >
+        <h2 className="text-3xl font-semibold text-blue-700">Stay Informed</h2>
+        <p className="text-lg text-gray-700 mt-3">Sign up for updates and best practices on chemical disposal.</p>
+        <div className="flex justify-center mt-4">
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-72 p-2 border rounded-lg shadow-sm mr-2"
+          />
+          <Button className="bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800">Subscribe</Button>
+        </div>
+      </motion.div>
+    </div>
+  );
+}

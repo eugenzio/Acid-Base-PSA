@@ -1,159 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SafeChem: Protecting Your Home & Environment - Acid and Base Safety">
-    <title>SafeChem: Protecting Your Home & Environment</title>
-    <style>
-        /* CSS - General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .hero {
-            background-image: url('https://via.placeholder.com/1600x600');
-            background-size: cover;
-            height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-        .hero h2 {
-            font-size: 3em;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-        }
-        .content-section {
-            padding: 20px;
-            text-align: center;
-        }
-        .content-section h2 {
-            margin-bottom: 20px;
-        }
-        .content-section p {
-            font-size: 1.1em;
-        }
-        .interactive-quiz {
-            margin-top: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Media Queries for Responsive Design */
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acids and Bases: Safe Disposal and Handling</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Basic Reset */
+    body, h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+    section {
+      padding: 25px;
+      margin: 20px 0;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #4CAF50;
+    }
+    p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+    .example img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .example {
+      margin-bottom: 30px;
+    }
+    .example p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .call-to-action {
+      background-color: #f4f4f4;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .call-to-action p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .quiz-container {
+      background-color: #f1f1f1;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .quiz-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .quiz-container label {
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .quiz-container input[type="text"], .quiz-container input[type="submit"] {
+      padding: 10px;
+      font-size: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .quiz-container input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .quiz-container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    footer {
+      text-align: center;
+      font-size: 1rem;
+      color: #777;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>SafeChem: Protecting Your Home & Environment</h1>
-    </header>
 
-    <div class="hero">
-        <h2>Stay Safe with Acids & Bases</h2>
-    </div>
+<header>
+  <h1>Safe Disposal and Handling of Acids and Bases</h1>
+  <p>Learn how to safely dispose of and handle common household chemicals.</p>
+</header>
 
-    <div class="content-section">
-        <h2>Understanding Acid & Base Safety</h2>
-        <p>Learn how to handle acids and bases safely at home to protect both your family and the environment.</p>
-        <a href="#dangers-tips" class="button">Dangers & Safety Tips</a>
-    </div>
+<!-- Introduction Section -->
+<section id="hook">
+  <h2>Why Safe Disposal Matters</h2>
+  <p>Acids and bases are powerful chemicals used in everyday cleaning products and industrial applications. However, improper disposal can cause dangerous reactions and environmental harm. Our goal is to provide safe disposal methods and handling precautions to ensure your safety and the safety of the environment.</p>
+</section>
 
-    <div class="content-section" id="dangers-tips">
-        <h2>Dangers & Safety Tips</h2>
-        <p>Improper handling of acids and bases can lead to dangerous accidents. Follow these tips:</p>
-        <ul>
-            <li>Always wear protective gloves and eyewear when handling chemicals.</li>
-            <li>Store acids and bases in separate, labeled containers.</li>
-            <li>Neutralize acids and bases before disposal.</li>
-        </ul>
-        <p><strong>Animated Safety Instructions:</strong></p>
-        <div class="interactive-quiz">
-            <button onclick="alert('Safety tip animation coming soon!')">Watch Animation</button>
-        </div>
-    </div>
+<!-- Problem and Solution Section -->
+<section id="context-solution">
+  <h2>Understanding the Dangers and Our Solutions</h2>
+  <p>Many people do not realize the potential hazards of household chemicals. Mixing the wrong chemicals or disposing of them improperly can lead to toxic fumes, burns, and even explosions. This section explains safe practices for handling and disposing of chemicals like hydrochloric acid, sodium hydroxide, and bleach.</p>
+</section>
 
-    <div class="content-section">
-        <h2>The Science (Acids & Bases Explained)</h2>
-        <p>Acids and bases are common in many household substances. Learn more about their properties and the pH scale.</p>
-        <div id="ph-scale">
-            <p><strong>Interactive pH Scale:</strong></p>
-            <div id="ph-slider" style="width: 100%; height: 25px;"></div>
-        </div>
-    </div>
+<!-- Example Acids and Bases Section -->
+<section id="examples">
+  <h2>Common Acids and Bases: Proper Disposal and Handling</h2>
 
-    <div class="content-section">
-        <h2>Safe Disposal Guide</h2>
-        <p>Learn how to properly dispose of common acids and bases in your household.</p>
-        <a href="disposal-guide.pdf" download class="button">Download Safe Disposal Guide</a>
-    </div>
+  <div class="example">
+    <h3>Hydrochloric Acid (HCl)</h3>
+    <img src="images/acid-hcl.jpg" alt="Hydrochloric Acid">
+    <p><strong>Proper Use:</strong> Hydrochloric acid is commonly used in toilet bowl cleaners and pH adjustments in pools.</p>
+    <p><strong>Handling:</strong> Always wear gloves and goggles. Handle in well-ventilated areas to avoid inhaling fumes.</p>
+    <p><strong>Disposal:</strong> Small amounts of HCl can be neutralized with sodium bicarbonate and safely flushed down the drain, following local regulations. Larger amounts must be taken to a hazardous waste facility.</p>
+    <p><strong>Precautions:</strong> Never mix hydrochloric acid with ammonia or bleach. Always store securely and in a labeled container.</p>
+    <p><strong>Source:</strong> U.S. Environmental Protection Agency (EPA) - <a href="https://www.epa.gov/hw/household-hazardous-waste-hhw" target="_blank">EPA Household Hazardous Waste</a></p>
+  </div>
 
-    <div class="content-section">
-        <h2>Interactive Quiz: Test Your Knowledge</h2>
-        <p>Take the quiz to test your understanding of acid and base safety!</p>
-        <div class="interactive-quiz">
-            <button onclick="startQuiz()">Start Quiz</button>
-        </div>
-    </div>
+  <div class="example">
+    <h3>Sodium Hydroxide (NaOH)</h3>
+    <img src="images/base-naoh.jpg" alt="Sodium Hydroxide">
+    <p><strong>Proper Use:</strong> Sodium hydroxide is found in drain cleaners and industrial cleaning products.</p>
+    <p><strong>Handling:</strong> Wear appropriate personal protective equipment, such as gloves and goggles. Sodium hydroxide can cause severe burns if it comes into contact with skin.</p>
+    <p><strong>Disposal:</strong> Small amounts of sodium hydroxide can be diluted with water and safely disposed of down the drain. For larger amounts, consult local hazardous waste disposal facilities.</p>
+    <p><strong>Precautions:</strong> Do not mix sodium hydroxide with acids, as this can lead to dangerous chemical reactions. Always store in a secure container.</p>
+    <p><strong>Source:</strong> U.S. EPA Household Hazardous Waste - <a href="https://www.epa.gov/hw/household-hazardous-waste-hhw" target="_blank">EPA Household Hazardous Waste</a></p>
+  </div>
 
-    <footer>
-        <p>&copy; 2025 SafeChem. All Rights Reserved.</p>
-    </footer>
+  <div class="example">
+    <h3>Bleach (Sodium Hypochlorite)</h3>
+    <img src="images/bleach.jpg" alt="Bleach">
+    <p><strong>Proper Use:</strong> Bleach is commonly used for disinfecting and whitening purposes.</p>
+    <p><strong>Handling:</strong> Always work in well-ventilated areas when using bleach. Wear gloves and eye protection to avoid skin or eye contact.</p>
+    <p><strong>Disposal:</strong> Small amounts of bleach can be diluted and flushed down the drain. For larger quantities, take it to a hazardous waste disposal site.</p>
+    <p><strong>Precautions:</strong> Never mix bleach with ammonia, acids, or other cleaning products. This can produce harmful and toxic fumes.</p>
+    <p><strong>Source:</strong> The Cleaning Institute - <a href="https://www.cleaninginstitute.org/understanding-products/cleaning-product-disposal" target="_blank">Cleaning Institute</a></p>
+  </div>
 
-    <script>
-        // JavaScript - Interactive pH Scale
-        let slider = document.createElement("input");
-        slider.type = "range";
-        slider.min = "0";
-        slider.max = "14";
-        slider.value = "7";
-        slider.style.width = "100%";
-        document.getElementById("ph-slider").appendChild(slider);
+</section>
 
-        // Quiz functionality
-        function startQuiz() {
-            alert("Welcome to the Acid and Base Safety Quiz! Let's get started.");
-            let score = 0;
-            let question1 = prompt("What is the pH of water?");
-            if (question1 == "7") score++;
-            let question2 = prompt("What is an example of an acid?");
-            if (question2.toLowerCase() == "vinegar") score++;
-            alert("Your score: " + score + " out of 2.");
-        }
-    </script>
+<!-- Call to Action Section -->
+<section class="call-to-action">
+  <h2>Protect Your Health and the Environment</h2>
+  <p>By following these disposal instructions and safety measures, you can help protect the environment and your health. Remember, always check local disposal regulations before disposing of chemicals.</p>
+  <p><strong>Let’s keep our homes safe and our planet clean!</strong></p>
+</section>
+
+<!-- Quiz Section -->
+<section class="quiz-container">
+  <h3>Test Your Knowledge: Chemical Disposal Quiz</h3>
+  <form id="quiz-form">
+    <label for="q1">1. What chemical should never be mixed with hydrochloric acid?</label>
+    <input type="text" id="q1" name="q1" placeholder="Enter answer here..." required>
+    
+    <label for="q2">2. How should sodium hydroxide be disposed of?</label>
+    <input type="text" id="q2" name="q2" placeholder="Enter answer here..." required>
+    
+    <label for="q3">3. What protective gear should be worn when handling acids and bases?</label>
+    <input type="text" id="q3" name="q3" placeholder="Enter answer here..." required>
+    
+    <input type="submit" value="Submit Quiz">
+  </form>
+</section>
+
+<!-- Footer Section -->
+<footer>
+  <p>&copy; 2025 Chemical Safety Project by Eugene, Emma, John, Sarah</p>
+</footer>
+
 </body>
 </html>
